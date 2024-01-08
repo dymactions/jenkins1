@@ -16,7 +16,7 @@ pipeline {
       when {
         allOf {
           branch 'main'
-          equals expected: true, actual: params.DEPLOY_TO
+          expression { params.DEPLOY_TO  }
         }
       }
 

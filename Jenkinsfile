@@ -5,7 +5,7 @@ pipeline {
     stage('build') {
       steps {
         sh 'echo hello > world.txt'
-        archiveArtifacts(artifacts: '*.txt')
+        archiveArtifacts(artifacts: '**/*.txt')
       }
     }
   }

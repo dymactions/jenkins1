@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        echo 'salut'
+        sh "echo test > test.txt"
       }
     }
   }

@@ -4,8 +4,13 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'echo hello > world.txt'
-        archiveArtifacts(artifacts: '*.txt')
+        echo 'hello'
+      }
+    }
+
+    post {
+      success {
+        emailext (to: 'dyma.node@gmail.com', body: 'test body' , subject: 'test subject jenkins' )   
       }
     }
   }

@@ -7,11 +7,12 @@ pipeline {
         echo 'hello'
       }
     }
+   
+  }
 
-    post {
-      success {
-        emailext (to: 'dyma.node@gmail.com', body: 'test body' , subject: 'test subject jenkins' )   
-      }
+  post {
+    success {
+      emailext (to: 'dyma.node@gmail.com', body: 'test body' , subject: 'test subject jenkins' )   
     }
   }
 

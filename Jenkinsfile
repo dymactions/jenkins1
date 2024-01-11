@@ -10,10 +10,5 @@ pipeline {
    
   }
 
-  post {
-    success {
-      emailext (to: 'dyma.node@gmail.com', body: '$DEFAULT_CONTENT' , subject: '$DEFAULT_SUBJECT' )   
-    }
-  }
 
 }
